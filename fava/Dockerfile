@@ -2,6 +2,8 @@ FROM python:bookworm AS build_env
 
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y bison flex build-essential
+
 ENV PATH="/app/bin:$PATH"
 RUN python3 -mvenv /app
 
