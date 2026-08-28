@@ -9,6 +9,7 @@ RUN python3 -mvenv /app
 
 ADD requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install git+https://github.com/Leon2xiaowu/fava_budget_freedom.git
 
 FROM python:slim
 
